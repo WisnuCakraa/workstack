@@ -30,3 +30,4 @@
    git clone [https://github.com/your-username/workstack.git](https://github.com/your-username/workstack.git)
    cd workstack
    npm install
+   ```
