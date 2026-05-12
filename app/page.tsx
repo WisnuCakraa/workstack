@@ -1,62 +1,41 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import { Icon } from '@iconify/react';
 
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex w-full max-w-3xl flex-1 flex-col items-center justify-between bg-white px-16 py-32 sm:items-start dark:bg-black">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl leading-10 font-semibold tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="flex flex-1 flex-col items-center justify-center bg-slate-50 font-sans min-h-screen">
+      <main className="flex w-full max-w-4xl flex-1 flex-col items-center justify-center bg-white px-8 py-24 sm:rounded-3xl sm:my-12 sm:shadow-xl sm:shadow-indigo-100/50 text-center">
+        <div className="mb-12 flex h-20 w-20 items-center justify-center rounded-3xl bg-indigo-50 text-indigo-500 shadow-inner">
+          <Icon icon="solar:users-group-rounded-bold-duotone" className="text-5xl" />
+        </div>
+
+        <div className="flex flex-col items-center gap-6 mb-12">
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-800">
+            Workstack <span className="text-indigo-500">Ops</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{' '}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{' '}
-            or the{' '}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{' '}
-            center.
+          <p className="max-w-lg text-lg leading-relaxed text-slate-500 font-medium">
+            A minimalist dashboard for managing your professional network.
+            Track activities, posts, and tasks with a clean pastel interface.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+
+        <div className="flex flex-col gap-4 sm:flex-row">
+          <Link
+            href="/users"
+            className="flex h-14 items-center justify-center gap-3 rounded-2xl bg-indigo-500 px-8 text-lg font-bold text-white shadow-lg shadow-indigo-200 transition hover:bg-indigo-600 hover:-translate-y-0.5 active:translate-y-0"
+          >
+            <Icon icon="solar:globus-linear" className="text-xl" />
+            Browse Users
+          </Link>
           <a
-            className="bg-foreground text-background flex h-12 w-full items-center justify-center gap-2 rounded-full px-5 transition-colors hover:bg-[#383838] md:w-[158px] dark:hover:bg-[#ccc]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://github.com/WisnuCakraa/workstack"
             target="_blank"
             rel="noopener noreferrer"
+            className="flex h-14 items-center justify-center gap-3 rounded-2xl border-2 border-indigo-100 bg-white px-8 text-lg font-bold text-indigo-500 transition hover:bg-indigo-50 hover:border-indigo-200"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] md:w-[158px] dark:border-white/[.145] dark:hover:bg-[#1a1a1a]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+            <Icon icon="solar:code-bold-duotone" className="text-xl" />
+            Source Code
           </a>
         </div>
       </main>
