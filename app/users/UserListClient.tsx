@@ -73,13 +73,19 @@ export function UserListClient({ initialUsers }: UserListClientProps) {
     },
     [router, pathname, searchParams]
   );
+  
+  const handleReset = useCallback(() => {
+    router.replace(pathname, { scroll: false });
+  }, [router, pathname]);
 
   return (
     <div className="space-y-4">
       <UserFilters />
 
       {filtered.length === 0 ? (
-        <EmptyState />
+        <EmptyState 
+          onReset={search || filter !== 'all' ? handleReset : undefined} 
+        />
       ) : (
         <>
           <div className="hidden md:block">
