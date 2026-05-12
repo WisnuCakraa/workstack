@@ -6,7 +6,7 @@ export function UserCard({ user }: { user: UserWithActivity }) {
   return (
     <Link
       href={`/users/${user.id}`}
-      className="block rounded-2xl border border-indigo-100 bg-white p-5 transition hover:border-indigo-300 hover:shadow-md"
+      className="block rounded-2xl border border-indigo-100 bg-white p-5 transition-all hover:border-indigo-300 hover:shadow-lg hover:shadow-indigo-100 active:scale-[0.98]"
     >
       <div className="mb-1 font-medium text-slate-800">
         {user.name}

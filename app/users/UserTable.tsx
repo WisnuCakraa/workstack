@@ -9,7 +9,7 @@ interface UserTableProps {
 
 export function UserTable({ users }: UserTableProps) {
   return (
-    <div className="overflow-x-auto rounded-2xl border border-indigo-100 bg-white shadow-sm">
+    <div className="overflow-x-auto rounded-2xl border border-indigo-100 bg-white shadow-sm shadow-indigo-100/50">
       <table className="w-full text-sm text-slate-600">
         <thead>
           <tr className="border-b border-indigo-100 bg-slate-50/50">
@@ -29,12 +29,12 @@ export function UserTable({ users }: UserTableProps) {
           {users.map((user) => (
             <tr
               key={user.id}
-              className="bg-white transition hover:bg-slate-50/80"
+              className="group relative bg-white transition-colors hover:bg-indigo-50/40"
             >
               <td className="px-4 py-3">
                 <Link
                   href={`/users/${user.id}`}
-                  className="font-medium text-indigo-600 hover:text-indigo-700 hover:underline"
+                  className="font-semibold text-slate-700 hover:text-indigo-600 after:absolute after:inset-0"
                 >
                   {user.name}
                 </Link>
@@ -47,7 +47,7 @@ export function UserTable({ users }: UserTableProps) {
                   href={`https://${user.website}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-indigo-500 hover:underline"
+                  className="relative z-10 text-slate-400 hover:text-indigo-500 hover:underline"
                 >
                   {user.website}
                 </a>
