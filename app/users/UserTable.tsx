@@ -29,6 +29,7 @@ export function UserTable({ users }: UserTableProps) {
           {users.map((user) => (
             <tr
               key={user.id}
+              data-testid="user-row"
               className="group relative bg-white transition-colors hover:bg-indigo-50/40"
             >
               <td className="px-4 py-3">

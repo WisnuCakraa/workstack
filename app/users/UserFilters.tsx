@@ -87,6 +87,7 @@ export function UserFilters() {
           ref={inputRef}
           type="text"
           placeholder="Search (type / to focus)..."
+          data-testid="search-input"
           value={localSearch}
           onChange={(e) => {
             setLocalSearch(e.target.value);
@@ -104,7 +105,12 @@ export function UserFilters() {
         />
         {localSearch && (
           <button
-            onClick={() => setLocalSearch('')}
+            onClick={() => {
+              setLocalSearch('');
+              setIsDebouncing(true);
+            }}
+            aria-label="Clear search"
+            data-testid="search-clear"
             className="absolute inset-y-0 right-0 flex items-center pr-3 text-slate-300 hover:text-rose-400 transition"
           >
             <Icon icon="solar:close-circle-bold-duotone" className="text-lg" />
