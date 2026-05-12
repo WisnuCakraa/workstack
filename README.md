@@ -1,33 +1,94 @@
-# Workstack
+# 🚀 Workstack Ops - User Operations Dashboard
 
-**Workstack** is a modern, responsive User Operations dashboard designed to streamline user data management and activity tracking. [cite_start]This project was developed as a technical assessment for **PT Mampu Inovasi Digital**. [cite: 26, 28]
+A premium, high-performance User Operations Dashboard built with **Next.js 15**, **TypeScript**, and **Tailwind CSS**. This project was developed as a technical home test for **PT Mampu Inovasi Digital**, focusing on clean architecture, advanced UX interactions, and a comprehensive testing suite.
 
-## 🚀 Overview
+## 🌟 Key Features
 
-[cite_start]Workstack transforms raw user data into a clear, useful, and easy-to-navigate interface. [cite: 46] [cite_start]It integrates user profiles with real-time activity signals—such as post counts and todo status—to provide a comprehensive view of user engagement. [cite: 53]
+### 1. User Directory (Task 2 & 4)
+- **Activity Signals:** Each user row is enriched with real-time derived data: total posts, completed todos, and pending todos.
+- **Advanced Filtering:** Beyond basic search, implement filters for "Users with Pending Tasks" and "Users with No Completed Tasks".
+- **Dynamic Sorting:** Sort users by Name, Most Pending Todos, or Total Posts.
+- **Smooth Debounced Search:** Performance-optimized client-side search with loading indicators, quick clear actions, and keyboard shortcuts (`/` to focus).
+- **Premium Pagination:** Custom tactile pagination system with active states, scale animations, and accessibility labels.
+
+### 2. User Detail Workspace (Task 3 & 4)
+- **Comprehensive Profile:** Clean presentation of Contact, Address, and Company information in a modern card layout.
+- **Activity Breakdown:** Dedicated sections for User Posts and Todos with tabbed navigation and "Show More" expansion logic to maintain visual hierarchy.
+- **Clickable Rows:** Table rows use the **Stretched Link** pattern for intuitive navigation while maintaining semantic HTML accessibility.
+- **SEO Ready:** Dynamic metadata generation using Next.js `generateMetadata`.
+
+### 3. State-of-the-Art UX (Task 5)
+- **Adaptive Layout:** Seamless transition from a robust **Table on Desktop** to specialized **Action Cards on Mobile**.
+- **Pastel Design System:** A curated light-mode only pastel theme (Indigo/Slate) providing a clean, professional, and accessible interface.
+- **Tactile Interactions:** Micro-animations (e.g., `active:scale-95`, smooth transitions) on buttons and interactive elements for a premium feel.
+- **Graceful Error Handling:** Custom Skeletons, Error Boundaries, and interactive Empty States with "Reset Filters" support.
 
 ## 🛠️ Tech Stack
 
-- [cite_start]**Framework:** Next.js 13+ (App Router) [cite: 11]
-- [cite_start]**Language:** TypeScript [cite: 9]
-- [cite_start]**Styling:** Tailwind CSS [cite: 14]
-- [cite_start]**Data Fetching:** Client-side fetching for dynamic filtering and sorting. [cite: 24, 25]
-- [cite_start]**Testing:** Jest & React Testing Library (RTL). [cite: 15, 81]
+- **Framework:** Next.js 15 (App Router) + TypeScript
+- **State Management:** TanStack Query (React Query) for optimized data fetching and synchronization.
+- **Styling:** Tailwind CSS + Vanilla CSS (Custom Pastel Design System).
+- **Icons:** Solar Icons via Iconify (Premium SVG Icon set).
+- **Testing:** 
+  - **Unit:** Jest + React Testing Library (19+ tests covering activity signals and business logic).
+  - **E2E:** Playwright (Happy path scenarios: List → Search → Paginate → Details).
 
-## ✨ Key Features
+## 📸 Proof of Testing
 
-- [cite_start]**Users List Page (`/users`):** Displays a responsive table of users with columns for Name, Email, and Website. [cite: 18, 20]
-- [cite_start]**Activity Signals:** Each user row is enriched with total posts, completed todos, and pending todos. [cite: 53]
-- [cite_start]**Advanced Filtering:** Real-time search by name/email and task-based filtering (e.g., users with pending tasks). [cite: 25, 57]
-- [cite_start]**User Details (`/users/[id]`):** Dedicated view for detailed profile information, including a clear section for the user's specific posts and todos. [cite: 33, 58]
-- [cite_start]**Mobile-First UX:** A sensible mobile layout that avoids "squeezed" tables for a better handheld experience. [cite: 54, 55]
-- [cite_start]**Resilient States:** Handles loading, error, empty filter results, and invalid user IDs gracefully. [cite: 21, 62]
+> [!NOTE]
+> To view the actual images, please run the tests and save the screenshots in `docs/screenshots/`.
+
+### Unit Testing (Jest)
+![Jest Results](./docs/screenshots/jest-results.png)
+*19 tests passed covering all user operations, activity signals, and filtering logic.*
+
+### E2E Testing (Playwright)
+![Playwright Results](./docs/screenshots/playwright-results.png)
+*E2E scenarios verified: navigation flow, search debounce performance, and pagination stability.*
 
 ## 📦 Getting Started
 
 1. **Clone & Install:**
    ```bash
-   git clone [https://github.com/your-username/workstack.git](https://github.com/your-username/workstack.git)
+   git clone <repo-url>
    cd workstack
-   npm install
+   yarn install
    ```
+
+2. **Setup Playwright Browsers:**
+   ```bash
+   yarn playwright install chromium
+   ```
+
+3. **Run Development Server:**
+   ```bash
+   yarn dev
+   ```
+
+## 🧪 Running Tests
+
+### Unit Tests
+```bash
+yarn test
+```
+
+### E2E Tests
+```bash
+# Headless mode
+yarn test:e2e
+
+# UI Mode (Interactive)
+yarn test:e2e:ui
+```
+
+## 📝 Task Compliance Checklist
+
+- [x] **Task 1: Setup** - Next.js 13+ (App Router), TS, Tailwind, Jest+RTL.
+- [x] **Task 2: Users List** - Responsive Table, Search, Sort, Loading/Error states.
+- [x] **Task 3: User Details** - Clickable rows, Detailed Card, Address/Company info, Back Link, SEO.
+- [x] **Task 4: User Operations** - Derived Activity Signals, Mobile Cards, Advanced Filters, Persisted State.
+- [x] **Task 5: Styling & UX** - Modern UI, Skeletons, Accessible Semantics, Empty States.
+- [x] **Bonus Items** - Pagination, Playwright E2E, ISR, Error Boundaries.
+
+---
+Developed with ❤️ for **PT Mampu Inovasi Digital**.
