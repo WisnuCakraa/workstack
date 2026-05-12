@@ -40,10 +40,12 @@ A premium, high-performance User Operations Dashboard built with **Next.js 15**,
 
 ### Unit Testing (Jest)
 ![Jest Results](./docs/screenshots/jest-results.png)
+
 *19 tests passed covering all user operations, activity signals, and filtering logic.*
 
 ### E2E Testing (Playwright)
 ![Playwright Results](./docs/screenshots/playwright-results.png)
+
 *E2E scenarios verified: navigation flow, search debounce performance, and pagination stability.*
 
 ## 📦 Getting Started
