@@ -6,7 +6,7 @@ const defaultOptions: RequestInit = {
   next: { revalidate: 60 },
 };
 
-export async function getUser(): Promise<User[]> {
+export async function getUsers(): Promise<User[]> {
   const res = await fetch(`${BASE_URL}/users`, defaultOptions);
   if (!res.ok) throw new Error('Failed to fetch users');
   return res.json();
