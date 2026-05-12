@@ -3,11 +3,13 @@ import { Icon } from '@iconify/react';
 interface EmptyStateProps {
   title?: string;
   description?: string;
+  onReset?: () => void;
 }
 
 export function EmptyState({
   title = 'No results found',
   description = 'Try adjusting your search or filter.',
+  onReset,
 }: EmptyStateProps) {
   return (
     <div className="flex flex-col items-center justify-center py-20 text-center">
@@ -18,6 +20,14 @@ export function EmptyState({
         {title}
       </h3>
       <p className="max-w-[200px] text-sm font-medium text-slate-400">{description}</p>
+      {onReset && (
+        <button
+          onClick={onReset}
+          className="mt-6 rounded-xl bg-indigo-50 px-4 py-2 text-sm font-bold text-indigo-600 transition hover:bg-indigo-100 active:scale-95"
+        >
+          Clear all filters
+        </button>
+      )}
     </div>
   );
 }
