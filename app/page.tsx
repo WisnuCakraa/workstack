@@ -15,8 +15,7 @@ export default function Home() {
             Workstack <span className="text-indigo-500">Ops</span>
           </h1>
           <p className="max-w-lg text-lg leading-relaxed text-slate-500 font-medium">
-            A minimalist dashboard for managing your professional network.
-            Track activities, posts, and tasks with a clean pastel interface.
+            A minimalist dashboard for Track activities, posts, and tasks
           </p>
         </div>
 
