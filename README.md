@@ -1,4 +1,23 @@
-# 🚀 Workstack Ops - User Operations Dashboard
+<div align="center">
+
+# 🚀 Workstack Ops
+**A premium User Operations Workspace for modern development teams.**
+
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Site-indigo?style=for-the-badge&logo=vercel)](https://workstack-mampu.vercel.app/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-slate?style=for-the-badge)](https://opensource.org/licenses/MIT)
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,jest,html,css,git&theme=light" />
+</p>
+
+---
+
+<p align="center">
+  <b>Built with the modern stack for PT Mampu Inovasi Digital.</b><br>
+  Focusing on clean architecture, tactile UX, and a robust testing suite.
+</p>
+
+</div>
 
 A premium, high-performance User Operations Dashboard built with **Next.js 15**, **TypeScript**, and **Tailwind CSS**. This project was developed as a technical home test for **PT Mampu Inovasi Digital**, focusing on clean architecture, advanced UX interactions, and a comprehensive testing suite.
 
