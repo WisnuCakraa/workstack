@@ -10,7 +10,7 @@ export function PostsList({ posts }: { posts: Post[] }) {
 
   if (posts.length === 0) {
     return (
-      <section>
+      <section data-testid="posts-empty">
         <h2 className="mb-3 text-base font-semibold text-gray-900">
           Posts
         </h2>
@@ -31,7 +31,7 @@ export function PostsList({ posts }: { posts: Post[] }) {
         </h2>
       </div>
 
-      <ul className="space-y-3">
+      <ul data-testid="posts-list" className="space-y-3">
         {visible.map((post) => (
           <li
             key={post.id}
@@ -48,6 +48,7 @@ export function PostsList({ posts }: { posts: Post[] }) {
       {posts.length > 3 && (
         <button
           onClick={() => setExpanded(!expanded)}
+          data-testid="posts-toggle"
           className="mt-4 flex items-center gap-1.5 text-sm font-bold text-indigo-600 hover:text-indigo-700 transition"
         >
           <Icon icon={expanded ? "solar:alt-arrow-up-linear" : "solar:alt-arrow-down-linear"} />

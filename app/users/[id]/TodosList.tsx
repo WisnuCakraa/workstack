@@ -32,6 +32,7 @@ export function TodosList({ todos }: { todos: Todo[] }) {
           <button
             key={t.value}
             onClick={() => setTab(t.value)}
+            data-testid={`tab-${t.value}`}
             className={`flex-1 rounded-lg px-3 py-2 text-xs font-bold transition-all ${tab === t.value
               ? 'bg-white text-indigo-600 shadow-sm'
               : 'text-slate-500 hover:text-slate-700 hover:bg-white/50'
@@ -43,9 +44,9 @@ export function TodosList({ todos }: { todos: Todo[] }) {
       </div>
 
       {filtered.length === 0 ? (
-        <p className="text-sm text-gray-400">Nothing here.</p>
+        <p data-testid="todos-empty" className="text-sm text-gray-400">Nothing here.</p>
       ) : (
-        <ul className="grid gap-2">
+        <ul data-testid="todos-list" className="grid gap-2">
           {filtered.slice(0, 8).map((todo) => (
             <li
               key={todo.id}

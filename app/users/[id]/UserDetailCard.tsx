@@ -3,7 +3,7 @@ import { Icon } from '@iconify/react';
 
 export function UserDetailCard({ user }: { user: User }) {
   return (
-    <div className="rounded-2xl border border-indigo-100 bg-white p-8 shadow-sm">
+    <div data-testid="user-detail-card" className="rounded-2xl border border-indigo-100 bg-white p-8 shadow-sm">
       <div className="mb-8 border-b border-slate-100 pb-6">
         <h1 className="text-3xl font-bold text-slate-800 tracking-tight">
           {user.name}
@@ -15,7 +15,7 @@ export function UserDetailCard({ user }: { user: User }) {
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2">
-        <section>
+        <section data-testid="contact-section">
           <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-gray-400">
             Contact
           </h2>
@@ -49,7 +49,7 @@ export function UserDetailCard({ user }: { user: User }) {
           </ul>
         </section>
 
-        <section>
+        <section data-testid="address-section">
           <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-gray-400">
             Address
           </h2>
@@ -63,7 +63,7 @@ export function UserDetailCard({ user }: { user: User }) {
           </div>
         </section>
 
-        <section className="sm:col-span-2">
+        <section data-testid="company-section" className="sm:col-span-2">
           <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-gray-400">
             Company
           </h2>
